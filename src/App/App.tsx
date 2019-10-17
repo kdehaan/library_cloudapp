@@ -1,12 +1,11 @@
 import React from "react";
+import SearchBar from "../Components/SearchBar";
 import { Button } from "@material-ui/core";
 
 const App: React.FC = () => {
   return (
     <React.Fragment>
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
+      <SearchBar searchLabel={"Title of Book"} />
     </React.Fragment>
   );
 };
