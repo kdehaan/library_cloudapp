@@ -1,0 +1,11 @@
+/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/bin/Release/netcoreapp2.1/rhel.7.2-x64/getLibraryBooks.deps.json
+/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/bin/Release/netcoreapp2.1/rhel.7.2-x64/getLibraryBooks.runtimeconfig.json
+/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/bin/Release/netcoreapp2.1/rhel.7.2-x64/getLibraryBooks.runtimeconfig.dev.json
+/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/bin/Release/netcoreapp2.1/rhel.7.2-x64/getLibraryBooks.dll
+/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/bin/Release/netcoreapp2.1/rhel.7.2-x64/getLibraryBooks.pdb
+/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/obj/Release/netcoreapp2.1/rhel.7.2-x64/getLibraryBooks.csprojAssemblyReference.cache
+/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/obj/Release/netcoreapp2.1/rhel.7.2-x64/getLibraryBooks.csproj.CoreCompileInputs.cache
+/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/obj/Release/netcoreapp2.1/rhel.7.2-x64/getLibraryBooks.AssemblyInfoInputs.cache
+/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/obj/Release/netcoreapp2.1/rhel.7.2-x64/getLibraryBooks.AssemblyInfo.cs
+/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/obj/Release/netcoreapp2.1/rhel.7.2-x64/getLibraryBooks.dll
+/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/obj/Release/netcoreapp2.1/rhel.7.2-x64/getLibraryBooks.pdb

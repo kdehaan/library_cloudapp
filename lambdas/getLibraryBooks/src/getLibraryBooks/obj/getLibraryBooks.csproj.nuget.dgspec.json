@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/getLibraryBooks.csproj": {}
+  },
+  "projects": {
+    "/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/getLibraryBooks.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/getLibraryBooks.csproj",
+        "projectName": "getLibraryBooks",
+        "projectPath": "/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/getLibraryBooks.csproj",
+        "packagesPath": "/home/kdehaan/.nuget/packages/",
+        "outputPath": "/home/kdehaan/repositories/library_cloudapp/lambdas/getLibraryBooks/src/getLibraryBooks/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/kdehaan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Amazon.Lambda.Core": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Amazon.Lambda.Serialization.Json": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "Amazon.S3": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "rhel.7.2-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

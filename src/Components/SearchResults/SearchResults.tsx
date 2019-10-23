@@ -46,7 +46,7 @@ const SearchResults: React.FC<Props> = ({ results }) => {
     return (
       <React.Fragment>
         <ListItem key={result.title}>
-          <ListItemText primary={result.title} secondary="other text" />
+          <ListItemText primary={result.title} secondary={result.author} />
         </ListItem>
         <Divider />
       </React.Fragment>
