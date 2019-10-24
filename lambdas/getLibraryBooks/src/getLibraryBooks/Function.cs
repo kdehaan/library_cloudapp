@@ -82,6 +82,7 @@ namespace getLibraryBooks
         public string FunctionHandler(string input, ILambdaContext context)
         {
             // Console.WriteLine(input.query);
+            input = input.ToLower();
             Regex rx = new Regex(@"(((author)|(country)|(language)|(title)):).+?((?=(((author)|(country)|(language)|(title)):))|$)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
             MatchCollection rxMatches = rx.Matches(input);
             List<SearchFields> searches = new List<SearchFields>();
@@ -91,7 +92,7 @@ namespace getLibraryBooks
                 string[] versions = matchText.Split(":", 4, StringSplitOptions.RemoveEmptyEntries);
                 ValidField type = (ValidField)Enum.Parse(typeof(ValidField), versions[0]);
                 string value = versions[1];
-                SearchFields searchField = new SearchFields(type, value);
+                SearchFields searchField = new SearchFields(type, value.ToLower());
                 searches.Add(searchField);
 
 
@@ -103,19 +104,19 @@ namespace getLibraryBooks
             {
                 if (searches.Count == 0)
                 {
-                    if (book.author.Contains(input))
+                    if (book.author.ToLower().Contains(input))
                     {
                         bookMatches.Add(book);
                     }
-                    else if (book.language.Contains(input))
+                    else if (book.language.ToLower().Contains(input))
                     {
                         bookMatches.Add(book);
                     }
-                    else if (book.country.Contains(input))
+                    else if (book.country.ToLower().Contains(input))
                     {
                         bookMatches.Add(book);
                     }
-                    else if (book.title.Contains(input))
+                    else if (book.title.ToLower().Contains(input))
                     {
                         bookMatches.Add(book);
                     }
@@ -127,25 +128,25 @@ namespace getLibraryBooks
                         switch (fields.type)
                         {
                             case ValidField.author:
-                                if (book.author.Contains(fields.value))
+                                if (book.author.ToLower().Contains(fields.value))
                                 {
                                     bookMatches.Add(book);
                                 }
                                 break;
                             case ValidField.country:
-                                if (book.country.Contains(fields.value))
+                                if (book.country.ToLower().Contains(fields.value))
                                 {
                                     bookMatches.Add(book);
                                 }
                                 break;
                             case ValidField.language:
-                                if (book.language.Contains(fields.value))
+                                if (book.language.ToLower().Contains(fields.value))
                                 {
                                     bookMatches.Add(book);
                                 }
                                 break;
                             case ValidField.title:
-                                if (book.title.Contains(fields.value))
+                                if (book.title.ToLower().Contains(fields.value))
                                 {
                                     bookMatches.Add(book);
                                 }

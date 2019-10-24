@@ -46,7 +46,7 @@ const SearchResults: React.FC<Props> = ({ results }) => {
   let resultsList: any = results.map(function(result) {
     return (
       <React.Fragment>
-        <ListItem key={result.title}>
+        <ListItem key={result.title} button component="a" href={result.link}>
           <ListItemText primary={result.title} secondary={result.author} />
         </ListItem>
         <Divider />
