@@ -54,12 +54,14 @@ class SearchBar extends React.Component<Props, State> {
   getResults() {
     fetch(ENDPOINT, {
       method: "POST",
-      body: `${this.state.query}`
+      body: JSON.stringify(this.state.query)
     }).then((response: Response) => {
-      console.log(response.text());
+      // console.log(response.json());
+      // console.log(JSON.parse(response.text()));
+      response.json().then((json: any) => {
+        this.setState({ results: JSON.parse(json) });
+      });
     });
-
-    // this.setState({ results: [] });
   }
 
   setQuery(e: any) {

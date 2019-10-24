@@ -76,12 +76,8 @@ namespace getLibraryBooks
                     List<Book> books = JsonConvert.DeserializeObject<List<Book>>(json);
                     return books;
                 }
-
             }
-
-
         }
-
 
         public string FunctionHandler(string input, ILambdaContext context)
         {

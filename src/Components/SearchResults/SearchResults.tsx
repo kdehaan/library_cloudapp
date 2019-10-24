@@ -42,6 +42,7 @@ interface Props {
 
 const SearchResults: React.FC<Props> = ({ results }) => {
   // const classes = useStyles();
+  console.log(results);
   let resultsList: any = results.map(function(result) {
     return (
       <React.Fragment>
