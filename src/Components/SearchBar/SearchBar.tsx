@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "@material-ui/core";
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { createStyles, Theme } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-import dummyResults from "../../res/dummyResults.json";
 import SearchResults from "../SearchResults";
 import { WithStyles, withStyles } from "@material-ui/core";
+const ENDPOINT = "https://p0jz5oh0u4.execute-api.us-east-2.amazonaws.com/Dev";
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -37,24 +37,33 @@ interface Props extends WithStyles<typeof styles> {
 
 interface State {
   results: any[];
+  query: string;
 }
 
 class SearchBar extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      results: []
+      results: [],
+      query: ""
     };
     this.getResults = this.getResults.bind(this);
+    this.setQuery = this.setQuery.bind(this);
   }
 
-  // const handleChange = (name: keyof State) => (
-  //   event: React.ChangeEvent<HTMLInputElement>
-  // ) => {
-  //   setValues({ ...values, [name]: event.target.value });
-  // };
   getResults() {
-    this.setState({ results: dummyResults });
+    fetch(ENDPOINT, {
+      method: "POST",
+      body: `${this.state.query}`
+    }).then((response: Response) => {
+      console.log(response.text());
+    });
+
+    // this.setState({ results: [] });
+  }
+
+  setQuery(e: any) {
+    this.setState({ query: e.target.value });
   }
 
   render() {
@@ -70,6 +79,7 @@ class SearchBar extends React.Component<Props, State> {
             type="search"
             className={classes.textField}
             margin="normal"
+            onChange={this.setQuery}
           />
           <Button
             variant="contained"

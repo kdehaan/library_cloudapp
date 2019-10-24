@@ -1,6 +1,5 @@
 import React from "react";
 import SearchBar from "../Components/SearchBar";
-import { Button } from "@material-ui/core";
 
 const App: React.FC = () => {
   return (
